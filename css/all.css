@@ -1,0 +1,311 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,*::before,*::after{
+	box-sizing: border-box;
+}
+
+.header{
+	height: 530px;
+	background: url("../img/Hero.png") no-repeat;
+    background-size: 100% 380px;
+}
+
+h1{
+	font-size: 40px;
+	color: #fff;
+	text-align: center;
+	padding-top: 90px;
+}
+
+.hp{
+	width: 40%;
+	height: 9.5%;
+	font-size: 18px;
+	font-weight: bolder;
+	text-align: center;
+	background: rgba(255,255,255,0.70);
+	border: 3px solid #FFFFFF;
+	border-radius: 3px;
+	outline: none;
+	margin-left: 30%;
+	margin-top: 5%;
+}
+
+.hs{
+	width: 80%;
+	height: 25%;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+	margin-left: 10%;
+	margin-top: 70px;
+	background-color: #FFFFFF;
+}
+
+
+.hs p{
+	font-size: 24px;
+	font-weight: bolder;
+	padding-left: 26px;
+	padding-top: 20px;
+}
+
+.hs input{
+	width: 15%;
+	height: 42px;
+	font-size: 20px;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 5px;
+	margin-left: 7.5%;
+	margin-top: 15px;
+	opacity: 0.8;
+}
+
+.hs input:hover{
+	transform: scale(1.2);
+	cursor: pointer;
+	opacity: 1;
+}
+
+.sip{
+	background: #8A82CC;
+}
+
+.sir{
+	background: #FFA782;
+}
+
+.siy{
+	background: #F5D105;
+}
+
+.sib{
+	background: #559AC8;
+}
+
+.dashedline{
+	position: relative;
+	border-bottom: 2px dashed #559AC8;
+	max-width: 90%;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+  
+.godown img{
+	background-color: #fff;
+	position: absolute;
+    top: -15px;
+    left: 48%;
+}
+
+.a{
+	font-size: 36px;
+	color: #8A82CC;
+	font-weight: bolder;
+	text-align: center;
+	line-height: 43px;
+	margin-top: 5%;
+}
+
+.d{
+	width: 94%;
+	margin-left: 6%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.dd{
+	width: 45%;
+	font-weight: bolder;
+	margin: 2% 1%;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+}
+
+.ddd{
+	color: #FFFFFF;
+	height: 350px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: space-between;
+}
+
+.ddd h3{
+	font-size: 24px;
+	line-height: 28px;
+	padding-top: 310px;
+	padding-left: 3%;
+}
+
+.ddd p{
+	font-size: 16px;
+	line-height: 19px;
+	padding-top: 320px;
+	padding-right: 3%;
+}
+
+.ddd2{
+	padding: 10px 20px;
+	line-height: 30px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.ddd2 img{
+	margin-right: 10px;
+}
+
+.ddd2 p,a{
+	width: 70%;
+	text-decoration: none;
+}
+
+.ddd2 .push{
+	margin-left: 0.3%;
+}
+
+.ddd2 .right{
+	width: 29.7%;
+	text-align: right;
+}
+
+.ddd2 a:visited{
+	color: blue;
+}
+
+.ddd2 .all{
+	width: 100%;
+}
+
+.p{
+	display: flex;
+	justify-content: center;
+	margin-top: 3%;
+}
+
+.p li{
+	margin: 0px 1.5%;
+	color: #4A4A4A;
+}
+
+.p a{
+	color: #4A4A4A;
+}
+
+.current{
+	font-size: 24px;
+}
+
+.p a:hover{
+	color: #559AC8;
+}
+
+.f{
+	height: 5%;
+	line-height: 30px;
+	background: #559AC8;
+	text-align: center;
+	margin-top: 3%;
+	padding: 2% 0;
+}
+
+.f h4{
+	color: #FFFFFF;
+}
+
+.f p{
+	color: #FFD366;
+}
+
+.fg{
+	width: 24px;
+	height: 24px;
+	display: none;
+	position: fixed;
+	bottom: 50px;
+	right: 30px;
+	cursor: pointer;
+  }
+ 
+@media(max-width: 768px){
+	.hs{
+		width: 50%;
+		height: 40%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.hs p{
+		padding: 0 0;
+		padding-top: 5%;
+		text-align: center;
+	}
+	.hs input{
+		width: 40%;
+		margin: 0 0;
+		margin-top: 30px;
+		margin-left: 6.5%;
+	}
+	.dashedline{
+		width: 100%;
+		position: relative;
+	}
+	.godown{
+		position: absolute;
+		top: 0px;
+		left: 13%;
+	}
+	.a{
+		margin-top: 10%;
+	}
+	.dd{
+		width: 92.5%;
+	}
+}

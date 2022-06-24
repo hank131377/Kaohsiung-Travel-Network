@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高雄旅遊資訊</title>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>高雄旅遊資訊</h1>
+            <select class="place hp">
+                <option value="welcome">- - 請選擇行政區 - -</option>
+            </select>
+
+            <div class="subject hs">
+                <p class="subtitle">熱門行政區</p>
+                <form>
+                    <input class="sip" type="button" value="苓雅區">
+                    <input class="sir" type="button" value="三民區">
+                    <input class="siy" type="button" value="新興區">
+                    <input class="sib" type="button" value="鹽埕區">
+                </form>
+            </div>
+
+            <div class="dashedline">
+                <a class="godown" href=""><img src="img/icon_godown.png" alt=""></a>
+            </div>
+
+        </div>
+
+        <h2 class="areaname a">載入中</h2>
+        
+        <div class="datadiv d"></div>
+        
+        <ul class="pagediv p"></ul>
+
+        <div class="footer f">
+            <h4>高雄旅遊網</h4>
+            <p>資料來源：高雄市政府</p>
+            <a class="gotop fg" href=""><img src="img/btn_goTop.png"></a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+</html>
