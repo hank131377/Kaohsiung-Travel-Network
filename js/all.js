@@ -22,17 +22,19 @@ axios.get('https://api.kcg.gov.tw/api/service/Get/9c8e1450-e833-499c-8320-29b36b
          local.Opentime = k.Opentime;
          local.Add = k.Add;
          local.Dist = k.Add.substr(6,3);
-         if(local.Dist == '那瑪夏'){
+         if(local.Dist === '那瑪夏'){
             local.Dist = '那瑪夏區'
          };
          local.Tel = k.Tel;
          local.Ticketinfo = k.Ticketinfo;
-         if(local.Ticketinfo == '' || local.Ticketinfo == '免費' || local.Ticketinfo == '免費入園'){
+         if(local.Ticketinfo === '' || local.Ticketinfo === '免費' || local.Ticketinfo === '免費入園'){
             local.Ticketinfo = '免費參觀'
          };
          if(local.Ticketinfo !=="免費參觀"){
-            local.Ticketinfo = ''
+            local.title = k.Ticketinfo
+            local.Ticketinfo = '請移置票券圖片查詢'
          }
+         console.log(local.length)
          local.Picture = k.Picture1;
          local.Alt = k.Picdescribe1;
          data.push(local);
@@ -55,11 +57,11 @@ function changelist(e){
    nowdata = [];
    currentpage = 1;
    data.forEach(function(k){
-      if(e.target.value == k.Dist){
+      if(e.target.value === k.Dist){
          nowdata.push(k);
          areaname.textContent = e.target.value;
       }
-      else if(e.target.value == 'welcome'){
+      else if(e.target.value === 'welcome'){
          nowdata = data;
          areaname.textContent = '歡迎來高雄'
       }
@@ -131,11 +133,11 @@ function printpage(page){
        str+=`<li><a class="prev" href='#'>< prev</a></li>`
    }
    else{
-       str+=`<li><a class="prev" href='#'>< prev</a></li>`
+       str+=`<li>< prev</li>`
    };
 
    for(let i = page.minpage;i <= page.maxpage;i++){
-      if(currentpage == i){
+      if(currentpage === i){
          str+=`<li><a class="current" href='#'>${i}</a></li>`
       }
       else{
@@ -147,7 +149,7 @@ function printpage(page){
        str+=`<li><a class="next" href='#'>next ></a></li>`
    }
    else{
-       str+=`<li><a class="next" href='#'>next ></a></li>`
+       str+=`<li>next ></li>`
    };
 
    pagediv.innerHTML = str;
@@ -158,10 +160,10 @@ function changepage(e){
     e.preventDefault();
     if(e.target.nodeName !== 'A'){return}
     {
-      if(e.target.textContent == '< prev'){
+      if(e.target.textContent === '< prev'){
         currentpage--
       }
-    else if(e.target.textContent == 'next >'){
+    else if(e.target.textContent === 'next >'){
         currentpage++
     }
     else{
@@ -172,10 +174,10 @@ function changepage(e){
 
 body.addEventListener('keydown',function(e){
    console.log(currentpage)
-   if(e.keyCode == 37 && currentpage > 1){
+   if(e.keyCode === 37 && currentpage > 1){
       document.querySelector(".prev").click();
    }
-   if(e.keyCode == 39){
+   if(e.keyCode === 39){
       document.querySelector(".next").click();
    }
 },false)
@@ -194,9 +196,9 @@ function datarow(k){
          </div>
          <div class="ddd2">
            <p class="all"><img src="img/icons_clock.png">${nowdata[i].Opentime}</p>
-           <a class="all" href="https://www.google.com.tw/maps/search/${nowdata[i].Add}" target=_blank><img src="img/icons_pin.png">${nowdata[i].Add}</a>
+           <p> <a class="all" href="https://www.google.com.tw/maps/search/${nowdata[i].Add}" target=_blank><img src="img/icons_pin.png">${nowdata[i].Add}</a></p>
            <p class="push"><img src="img/icons_phone.png">${nowdata[i].Tel}</p>
-           <p class="right"><img src="img/icons_tag.png">${nowdata[i].Ticketinfo}</p>
+           <p class="right"><img src="img/icons_tag.png" title='${nowdata[i].title}'>${nowdata[i].Ticketinfo}</p>
          </div>
        </div>
        `
